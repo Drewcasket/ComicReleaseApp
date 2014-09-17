@@ -1,0 +1,67 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context="com.example.drew.com.detroitlabs.comicreleaseapp.HomeActivity">
+
+
+
+    <TextView
+        android:id="@+id/app_name_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/app_name_title"
+        android:textColor="@color/white"
+        android:textSize="15dp"
+        android:background="@color/blue"
+        android:padding="100dp"/>
+
+    <Button
+        android:layout_centerHorizontal="true"
+        android:id="@+id/new_releases_button"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:text="@string/new_releases"
+        android:layout_marginTop="55dp"
+        android:layout_below="@+id/app_name_title"/>
+
+    <Button
+        android:layout_centerHorizontal="true"
+        android:id="@+id/my_comics_button"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:text="@string/my_comics"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/new_releases_button"/>
+
+    <Button
+        android:layout_centerHorizontal="true"
+        android:id="@+id/sign_in_button"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:text="@string/sign_in"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/my_comics_button"/>
+
+    <Button
+        android:layout_centerHorizontal="true"
+        android:id="@+id/sign_out_button"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:text="@string/sign_out"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/my_comics_button"/>
+
+    <Button
+        android:layout_centerHorizontal="true"
+        android:id="@+id/register_button"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:text="@string/register"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/sign_in_button"/>
+
+
+</RelativeLayout>
+
