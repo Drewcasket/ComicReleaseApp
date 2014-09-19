@@ -21,17 +21,17 @@ public class CompanyListActivity extends Activity implements View.OnClickListene
         ImageView boomLogo= (ImageView) findViewById(R.id.boom_logo);
         boomLogo.setOnClickListener(this);
 
-        ImageView darkhorseLogo= (ImageView) findViewById(R.id.dark_horse_logo);
-        darkhorseLogo.setOnClickListener(this);
+//        ImageView darkhorseLogo= (ImageView) findViewById(R.id.dark_horse_logo);
+//        darkhorseLogo.setOnClickListener(this);
 
         ImageView dcLogo= (ImageView) findViewById(R.id.dc_logo);
         dcLogo.setOnClickListener(this);
 
-        ImageView dynamiteLogo= (ImageView) findViewById(R.id.dynamite_logo);
-        dynamiteLogo.setOnClickListener(this);
+//        ImageView dynamiteLogo= (ImageView) findViewById(R.id.dynamite_logo);
+//        dynamiteLogo.setOnClickListener(this);
 
-        ImageView idwLogo= (ImageView) findViewById(R.id.idw_logo);
-        idwLogo.setOnClickListener(this);
+//        ImageView idwLogo= (ImageView) findViewById(R.id.idw_logo);
+//        idwLogo.setOnClickListener(this);
 
         ImageView imageLogo= (ImageView) findViewById(R.id.image_logo);
         imageLogo.setOnClickListener(this);
@@ -39,8 +39,8 @@ public class CompanyListActivity extends Activity implements View.OnClickListene
         ImageView marvelLogo= (ImageView) findViewById(R.id.marvel_logo);
         marvelLogo.setOnClickListener(this);
 
-        ImageView valiantLogo= (ImageView) findViewById(R.id.valiant_logo);
-        valiantLogo.setOnClickListener(this);
+//        ImageView valiantLogo= (ImageView) findViewById(R.id.valiant_logo);
+//        valiantLogo.setOnClickListener(this);
     }
 
 
@@ -72,22 +72,22 @@ public class CompanyListActivity extends Activity implements View.OnClickListene
                 Intent boom= new Intent(this, MenuActivity.class);
                 startActivity(boom);
                 break;
-            case R.id.dark_horse_logo:
-                Intent darkhorse= new Intent(this, MenuActivity.class);
-                startActivity(darkhorse);
-                break;
+//            case R.id.dark_horse_logo:
+//                Intent darkhorse= new Intent(this, MenuActivity.class);
+//                startActivity(darkhorse);
+//                break;
             case R.id.dc_logo:
                 Intent dc= new Intent(this, MenuActivity.class);
                 startActivity(dc);
                 break;
-            case R.id.dynamite_logo:
-                Intent dynamite= new Intent(this, MenuActivity.class);
-                startActivity(dynamite);
-                break;
-            case R.id.idw_logo:
-                Intent idw= new Intent(this, MenuActivity.class);
-                startActivity(idw);
-                break;
+//            case R.id.dynamite_logo:
+//                Intent dynamite= new Intent(this, MenuActivity.class);
+//                startActivity(dynamite);
+//                break;
+//            case R.id.idw_logo:
+//                Intent idw= new Intent(this, MenuActivity.class);
+//                startActivity(idw);
+//                break;
             case R.id.image_logo:
                 Intent image= new Intent(this, MenuActivity.class);
                 startActivity(image);
@@ -97,8 +97,8 @@ public class CompanyListActivity extends Activity implements View.OnClickListene
                 startActivity(marvel);
                 break;
 
-            case R.id.valiant_logo:
-                throw new NullPointerException();
+//            case R.id.valiant_logo:
+//                throw new NullPointerException();
 
         }
 
