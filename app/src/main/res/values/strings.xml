@@ -30,5 +30,8 @@
     <string name="register">Register</string>
     <string name="confirm_password_hint">confirm your password</string>
     <string name="sign_out">Sign Out</string>
+    <string name="current_releases">Current Releases</string>
+    <string name="last_week">Last Week</string>
+    <string name="next_week">Next Week</string>
 
 </resources>

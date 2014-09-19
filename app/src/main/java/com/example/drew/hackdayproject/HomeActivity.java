@@ -36,9 +36,7 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener {
             signIn.setVisibility(View.GONE);
             register.setVisibility(View.GONE);
             signOut.setVisibility(View.VISIBLE);
-        }
-
-        else {
+        } else {
             signIn.setOnClickListener(this);
             register.setVisibility(View.VISIBLE);
             signOut.setVisibility(View.GONE);
@@ -46,8 +44,6 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener {
 
 
     }
-
-
 
 
     @Override
@@ -75,20 +71,20 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener {
 
         switch (v.getId()) {
             case R.id.new_releases_button:
-                Intent iNewReleases= new Intent(this, CompanyListActivity.class);
+                Intent iNewReleases = new Intent(this, CompanyListActivity.class);
                 startActivity(iNewReleases);
                 break;
             case R.id.my_comics_button:
-                Intent iMyComics= new Intent(this, MyComicsActivity.class);
+                Intent iMyComics = new Intent(this, MyComicsActivity.class);
                 startActivity(iMyComics);
                 break;
             case R.id.sign_in_button:
-                Intent iSignIn= new Intent(this, SignInActivity.class);
+                Intent iSignIn = new Intent(this, SignInActivity.class);
                 startActivity(iSignIn);
                 break;
 
             case R.id.register_button:
-                Intent iRegister= new Intent(this, RegisterActivity.class);
+                Intent iRegister = new Intent(this, RegisterActivity.class);
                 startActivity(iRegister);
                 break;
 

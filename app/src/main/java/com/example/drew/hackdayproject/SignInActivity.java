@@ -58,7 +58,7 @@ public class SignInActivity extends BaseActivity implements View.OnClickListener
 
         String userEmail = email.getText().toString().trim();
         String userPassword = password.getText().toString();
-        if (!userEmail.equals(getUserEmail())){
+        if (!userEmail.equals(getUserEmail())) {
             email.setError("Email address not found");
             return;
         }

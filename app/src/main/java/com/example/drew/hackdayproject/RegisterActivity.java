@@ -16,8 +16,6 @@ public class RegisterActivity extends BaseActivity implements View.OnClickListen
     EditText confirmPassword;
 
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -59,7 +57,7 @@ public class RegisterActivity extends BaseActivity implements View.OnClickListen
         String userPassword = password.getText().toString();
         String confirmUserPassword = confirmPassword.getText().toString();
 
-        if (!userEmail.matches(Patterns.EMAIL_ADDRESS.pattern())){
+        if (!userEmail.matches(Patterns.EMAIL_ADDRESS.pattern())) {
             email.setError("Please enter a valid email address");
             return;
         }
