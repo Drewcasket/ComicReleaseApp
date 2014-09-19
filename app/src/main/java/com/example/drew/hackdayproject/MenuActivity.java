@@ -3,6 +3,7 @@ package com.example.drew.hackdayproject;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -14,6 +15,10 @@ public class MenuActivity extends Activity implements View.OnClickListener {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
+
+        ScrapeData titties = new ScrapeData();
+
+        Log.d("pooooop", titties.getWebData());
 
         TextView new_game= (TextView) findViewById(R.id.new_game_button);
         new_game.setOnClickListener(this);

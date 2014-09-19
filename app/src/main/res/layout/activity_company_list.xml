@@ -5,84 +5,82 @@
     android:background="@color/black"
     tools:context="com.example.drew.hackdayproject.HomeActivity">
 
-    <ImageView
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/boom_logo"
+                android:src="@drawable/boom_comics_logo" />
 
 
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:id="@+id/boom_logo"
-        android:src="@drawable/boom_comics_logo"
-        android:paddingTop="5dp"
-        android:paddingBottom="5dp"/>
-
-    <ImageView
 
 
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:src="@drawable/dark_horse_logo"
-        android:id="@+id/dark_horse_logo"
-        android:layout_below="@+id/boom_logo"
-        android:paddingTop="5dp"
-        android:paddingBottom="5dp"/>
+    <!--<ImageView-->
 
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:src="@drawable/dc_comics_logo"
-        android:id="@+id/dc_logo"
-        android:layout_below="@+id/dark_horse_logo"
-        android:paddingTop="5dp"
-        android:paddingBottom="5dp"
-        />
 
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:src="@drawable/dynamite_comics_logo2"
-        android:id="@+id/dynamite_logo"
-        android:layout_below="@+id/dc_logo"
-        android:paddingTop="5dp"
-        android:paddingBottom="5dp"
-        />
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="70dp"-->
+        <!--android:src="@drawable/dark_horse_comics_logo"-->
+        <!--android:id="@+id/dark_horse_logo"-->
+        <!--android:layout_below="@+id/boom_logo"-->
+        <!--/>-->
 
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:src="@drawable/idw_publishing_logo"
-        android:id="@+id/idw_logo"
-        android:layout_below="@+id/dynamite_logo"
-        android:paddingTop="5dp"
-        android:paddingBottom="5dp"
-        />
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/dc_comics_logo"
+                android:id="@+id/dc_logo"
+                android:layout_below="@+id/boom_logo" />
 
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:src="@drawable/image_comics_logo"
-        android:id="@+id/image_logo"
-        android:layout_below="@+id/idw_logo"
-        android:paddingTop="5dp"
-        android:paddingBottom="5dp"
-        />
+    <!--<ImageView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="70dp"-->
+        <!--android:src="@drawable/dynamite_comics_logo"-->
+        <!--android:id="@+id/dynamite_logo"-->
+        <!--android:layout_below="@+id/dc_logo"-->
+        <!---->
+        <!--/>-->
 
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:src="@drawable/marvel_comics_logo"
-        android:id="@+id/marvel_logo"
-        android:layout_below="@+id/image_logo"
-        android:paddingTop="5dp"
-        android:paddingBottom="5dp"
-        />
+    <!--<ImageView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="70dp"-->
+        <!--android:src="@drawable/idw_comics_logo"-->
+        <!--android:id="@+id/idw_logo"-->
+        <!--android:layout_below="@+id/dynamite_logo"-->
+        <!---->
+        <!--/>-->
 
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:src="@drawable/valiant_comics_logo"
-        android:id="@+id/valiant_logo"
-        android:layout_below="@+id/marvel_logo"
-        android:paddingTop="5dp"
-        android:paddingBottom="5dp"
-        />
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:src="@drawable/image_comics_logo"
+                android:id="@+id/image_logo"
+                android:layout_below="@+id/dc_logo" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="70dp"
+                android:src="@drawable/marvel_comics_logo"
+                android:id="@+id/marvel_logo"
+                android:layout_below="@+id/image_logo" />
+
+    <!--<ImageView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="70dp"-->
+        <!--android:src="@drawable/valiant_comics_logo"-->
+        <!--android:id="@+id/valiant_logo"-->
+        <!--android:layout_below="@+id/marvel_logo"-->
+        <!---->
+        <!--/>-->
+        </LinearLayout>
+    </ScrollView>
 </RelativeLayout>
