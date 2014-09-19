@@ -8,7 +8,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 
-public class CompanyListActivity extends Activity implements View.OnClickListener {
+public class CompanyListActivity extends BaseActivity implements View.OnClickListener {
 
 
 
@@ -18,13 +18,13 @@ public class CompanyListActivity extends Activity implements View.OnClickListene
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_company_list);
 
-        ImageView boomLogo= (ImageView) findViewById(R.id.boom_logo);
+        ImageView boomLogo = (ImageView) findViewById(R.id.boom_logo);
         boomLogo.setOnClickListener(this);
 
 //        ImageView darkhorseLogo= (ImageView) findViewById(R.id.dark_horse_logo);
 //        darkhorseLogo.setOnClickListener(this);
 
-        ImageView dcLogo= (ImageView) findViewById(R.id.dc_logo);
+        ImageView dcLogo = (ImageView) findViewById(R.id.dc_logo);
         dcLogo.setOnClickListener(this);
 
 //        ImageView dynamiteLogo= (ImageView) findViewById(R.id.dynamite_logo);
@@ -33,17 +33,15 @@ public class CompanyListActivity extends Activity implements View.OnClickListene
 //        ImageView idwLogo= (ImageView) findViewById(R.id.idw_logo);
 //        idwLogo.setOnClickListener(this);
 
-        ImageView imageLogo= (ImageView) findViewById(R.id.image_logo);
+        ImageView imageLogo = (ImageView) findViewById(R.id.image_logo);
         imageLogo.setOnClickListener(this);
 
-        ImageView marvelLogo= (ImageView) findViewById(R.id.marvel_logo);
+        ImageView marvelLogo = (ImageView) findViewById(R.id.marvel_logo);
         marvelLogo.setOnClickListener(this);
 
 //        ImageView valiantLogo= (ImageView) findViewById(R.id.valiant_logo);
 //        valiantLogo.setOnClickListener(this);
     }
-
-
 
 
     @Override
@@ -65,21 +63,28 @@ public class CompanyListActivity extends Activity implements View.OnClickListene
         return super.onOptionsItemSelected(item);
     }
 
+    private void gotoMenu(int drawableID, String compURL) {
+        Intent igotoMenu = new Intent(this, MenuActivity.class);
+        igotoMenu.putExtra(MenuActivity.COMPANY_LOGO, drawableID);
+        igotoMenu.putExtra(MenuActivity.COMPANY_URL, compURL );
+        startActivity(igotoMenu);
+    }
+
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.boom_logo:
-                Intent boom= new Intent(this, MenuActivity.class);
-                startActivity(boom);
+                gotoMenu(R.drawable.boom_comics_logo, "http://www.comicvine.com/new-comics/?company=1868&startWeek=09%2F14%2F2014");
                 break;
+
 //            case R.id.dark_horse_logo:
 //                Intent darkhorse= new Intent(this, MenuActivity.class);
 //                startActivity(darkhorse);
 //                break;
             case R.id.dc_logo:
-                Intent dc= new Intent(this, MenuActivity.class);
-                startActivity(dc);
+                gotoMenu(R.drawable.dc_comics_logo, "http://www.comicvine.com/new-comics/?company=10&startWeek=09%2F14%2F2014");
                 break;
+
 //            case R.id.dynamite_logo:
 //                Intent dynamite= new Intent(this, MenuActivity.class);
 //                startActivity(dynamite);
@@ -89,13 +94,14 @@ public class CompanyListActivity extends Activity implements View.OnClickListene
 //                startActivity(idw);
 //                break;
             case R.id.image_logo:
-                Intent image= new Intent(this, MenuActivity.class);
-                startActivity(image);
+                gotoMenu(R.drawable.image_comics_logo, "http://www.tfaw.com/Arriving-This-Week?_results_start_date_search=-4+days&_results_end_date_search=%2B3+days&_results_limit_search=30&_results_adultfilter_search=T&_results_ordercombo_search=title_asc&_results_available_search=none&_results_publishers_search=7");
                 break;
+
+
             case R.id.marvel_logo:
-                Intent marvel= new Intent(this, MenuActivity.class);
-                startActivity(marvel);
+                gotoMenu(R.drawable.marvel_comics_logo, "http://www.tfaw.com/Arriving-This-Week?_results_start_date_search=-4+days&_results_end_date_search=%2B3+days&_results_limit_search=30&_results_adultfilter_search=T&_results_ordercombo_search=title_asc&_results_available_search=none&_results_publishers_search=2");
                 break;
+
 
 //            case R.id.valiant_logo:
 //                throw new NullPointerException();

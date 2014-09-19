@@ -7,19 +7,19 @@ import android.os.Bundle;
 /**
  * Created by Drew on 9/16/14.
  */
-public abstract class BaseActivity extends Activity{
+public abstract class BaseActivity extends Activity {
 
     private SharedPreferences sharedPreferences;
 
     protected void setUserEmail(String email) {
         SharedPreferences.Editor editor = sharedPreferences.edit();
-        editor.putString(getString(R.string.user_email), email );
+        editor.putString(getString(R.string.user_email), email);
         editor.commit();
     }
 
     protected void setUserPassword(String password) {
         SharedPreferences.Editor editor = sharedPreferences.edit();
-        editor.putString(getString(R.string.user_password), password );
+        editor.putString(getString(R.string.user_password), password);
         editor.commit();
     }
 
