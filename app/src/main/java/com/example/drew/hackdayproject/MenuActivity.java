@@ -13,13 +13,17 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.drew.hackdayproject.formatters.ComixologyDateFormatter;
+import com.example.drew.hackdayproject.formatters.DateFormatter;
+
 public class MenuActivity extends BaseActivity implements View.OnClickListener {
 
 
     public static final String COMPANY_LOGO = "compLogo";
-    public static final String COMPANY_URL = "compWebview";
+    public static final String COMPANY_TITLE = "compTitle";
     ImageView comicLogo;
     WebView webviewArea;
+    DateFormatter dateFormatter;
 
 
 
@@ -28,18 +32,26 @@ public class MenuActivity extends BaseActivity implements View.OnClickListener {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
 
+        int companyLogo = getIntent().getIntExtra(COMPANY_LOGO, 0);
+        String companyTitle = getIntent().getStringExtra(COMPANY_TITLE);
         Button nextWeek = (Button) findViewById(R.id.next_week_button);
         Button lastWeek = (Button) findViewById(R.id.last_week_button);
         comicLogo = (ImageView) findViewById(R.id.comic_logo);
         webviewArea = (WebView) findViewById(R.id.webview_area);
+        dateFormatter = new ComixologyDateFormatter(companyTitle);
 
 
-        int companyLogo = getIntent().getIntExtra(COMPANY_LOGO, 0);
-        String companyWebview = getIntent().getStringExtra(COMPANY_URL);
+
+
+
+
+
         nextWeek.setOnClickListener(this);
         lastWeek.setOnClickListener(this);
         comicLogo.setImageResource(companyLogo);
-        webviewArea.loadUrl(companyWebview);
+        webviewArea.loadUrl (dateFormatter.currentWeek());
+
+
 
 
 
@@ -72,17 +84,20 @@ public class MenuActivity extends BaseActivity implements View.OnClickListener {
 
     @Override
     public void onClick(View v) {
+
+
         switch (v.getId()) {
             case R.id.last_week_button:
-                Intent iNewGame = new Intent(this, NewGameActivity.class);
-                startActivity(iNewGame);
+                webviewArea.loadUrl(dateFormatter.lastWeek());
                 break;
 
             case R.id.next_week_button:
-                Intent iContinueGame = new Intent(this, ContinueGameActivity.class);
-                startActivity(iContinueGame);
+                webviewArea.loadUrl(dateFormatter.nextWeek());
                 break;
 
+            case R.id.current_week_button:
+                webviewArea.loadUrl(dateFormatter.nextWeek());
+                break;
 
         }
 

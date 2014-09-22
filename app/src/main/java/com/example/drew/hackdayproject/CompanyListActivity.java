@@ -1,6 +1,5 @@
 package com.example.drew.hackdayproject;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
@@ -63,10 +62,11 @@ public class CompanyListActivity extends BaseActivity implements View.OnClickLis
         return super.onOptionsItemSelected(item);
     }
 
-    private void gotoMenu(int drawableID, String compURL) {
+    private void gotoMenu(int drawableID, String comic_title) {
         Intent igotoMenu = new Intent(this, MenuActivity.class);
         igotoMenu.putExtra(MenuActivity.COMPANY_LOGO, drawableID);
-        igotoMenu.putExtra(MenuActivity.COMPANY_URL, compURL );
+        igotoMenu.putExtra(MenuActivity.COMPANY_TITLE, comic_title);
+
         startActivity(igotoMenu);
     }
 
@@ -74,37 +74,35 @@ public class CompanyListActivity extends BaseActivity implements View.OnClickLis
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.boom_logo:
-                gotoMenu(R.drawable.boom_comics_logo, "http://www.comicvine.com/new-comics/?company=1868&startWeek=09%2F14%2F2014");
+                gotoMenu(R.drawable.boom_comics_logo, "boom_studios");
                 break;
 
 //            case R.id.dark_horse_logo:
-//                Intent darkhorse= new Intent(this, MenuActivity.class);
-//                startActivity(darkhorse);
+//                gotoMenu(R.drawable.dark_horse_comics_logo, "dark_horse");
 //                break;
             case R.id.dc_logo:
-                gotoMenu(R.drawable.dc_comics_logo, "http://www.comicvine.com/new-comics/?company=10&startWeek=09%2F14%2F2014");
+                gotoMenu(R.drawable.dc_comics_logo, "dc_comics");
                 break;
 
 //            case R.id.dynamite_logo:
-//                Intent dynamite= new Intent(this, MenuActivity.class);
-//                startActivity(dynamite);
+//                gotoMenu(R.drawable.dynamite_comics_logo, "dynamite");
 //                break;
 //            case R.id.idw_logo:
-//                Intent idw= new Intent(this, MenuActivity.class);
-//                startActivity(idw);
+//                gotoMenu(R.drawable.idw_comics_logo, "idw");
 //                break;
             case R.id.image_logo:
-                gotoMenu(R.drawable.image_comics_logo, "http://www.tfaw.com/Arriving-This-Week?_results_start_date_search=-4+days&_results_end_date_search=%2B3+days&_results_limit_search=30&_results_adultfilter_search=T&_results_ordercombo_search=title_asc&_results_available_search=none&_results_publishers_search=7");
+                gotoMenu(R.drawable.image_comics_logo, "image");
                 break;
 
 
             case R.id.marvel_logo:
-                gotoMenu(R.drawable.marvel_comics_logo, "http://www.tfaw.com/Arriving-This-Week?_results_start_date_search=-4+days&_results_end_date_search=%2B3+days&_results_limit_search=30&_results_adultfilter_search=T&_results_ordercombo_search=title_asc&_results_available_search=none&_results_publishers_search=2");
+                gotoMenu(R.drawable.marvel_comics_logo, "marvel");
                 break;
 
 
 //            case R.id.valiant_logo:
-//                throw new NullPointerException();
+//                gotoMenu(R.drawable.valiant_comics_logo, "valiant");
+//                break;
 
         }
 
