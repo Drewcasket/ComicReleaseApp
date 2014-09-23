@@ -7,15 +7,12 @@
 
 
 
-    <TextView
+    <ImageView
         android:id="@+id/app_name_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/app_name_title"
-        android:textColor="@color/white"
-        android:textSize="15dp"
-        android:background="@color/blue"
-        android:padding="100dp"/>
+        android:src="@drawable/atw_title_1"
+        android:padding="50dp"/>
 
     <Button
         android:layout_centerHorizontal="true"
