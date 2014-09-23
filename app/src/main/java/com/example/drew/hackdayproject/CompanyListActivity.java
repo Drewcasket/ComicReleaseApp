@@ -20,26 +20,20 @@ public class CompanyListActivity extends BaseActivity implements View.OnClickLis
         ImageView boomLogo = (ImageView) findViewById(R.id.boom_logo);
         boomLogo.setOnClickListener(this);
 
-//        ImageView darkhorseLogo= (ImageView) findViewById(R.id.dark_horse_logo);
-//        darkhorseLogo.setOnClickListener(this);
+        ImageView darkhorseLogo= (ImageView) findViewById(R.id.dark_horse_logo);
+        darkhorseLogo.setOnClickListener(this);
 
         ImageView dcLogo = (ImageView) findViewById(R.id.dc_logo);
         dcLogo.setOnClickListener(this);
 
-//        ImageView dynamiteLogo= (ImageView) findViewById(R.id.dynamite_logo);
-//        dynamiteLogo.setOnClickListener(this);
-
-//        ImageView idwLogo= (ImageView) findViewById(R.id.idw_logo);
-//        idwLogo.setOnClickListener(this);
+        ImageView idwLogo= (ImageView) findViewById(R.id.idw_logo);
+        idwLogo.setOnClickListener(this);
 
         ImageView imageLogo = (ImageView) findViewById(R.id.image_logo);
         imageLogo.setOnClickListener(this);
 
         ImageView marvelLogo = (ImageView) findViewById(R.id.marvel_logo);
         marvelLogo.setOnClickListener(this);
-
-//        ImageView valiantLogo= (ImageView) findViewById(R.id.valiant_logo);
-//        valiantLogo.setOnClickListener(this);
     }
 
 
@@ -77,32 +71,25 @@ public class CompanyListActivity extends BaseActivity implements View.OnClickLis
                 gotoMenu(R.drawable.boom_comics_logo, "boom_studios");
                 break;
 
-//            case R.id.dark_horse_logo:
-//                gotoMenu(R.drawable.dark_horse_comics_logo, "dark_horse");
-//                break;
+            case R.id.dark_horse_logo:
+                gotoMenu(R.drawable.dark_horse_comics_logo, "dark_horse");
+                break;
+
             case R.id.dc_logo:
                 gotoMenu(R.drawable.dc_comics_logo, "dc_comics");
                 break;
 
-//            case R.id.dynamite_logo:
-//                gotoMenu(R.drawable.dynamite_comics_logo, "dynamite");
-//                break;
-//            case R.id.idw_logo:
-//                gotoMenu(R.drawable.idw_comics_logo, "idw");
-//                break;
+            case R.id.idw_logo:
+                gotoMenu(R.drawable.idw_comics_logo, "idw");
+                break;
+
             case R.id.image_logo:
                 gotoMenu(R.drawable.image_comics_logo, "image");
                 break;
 
-
             case R.id.marvel_logo:
                 gotoMenu(R.drawable.marvel_comics_logo, "marvel");
                 break;
-
-
-//            case R.id.valiant_logo:
-//                gotoMenu(R.drawable.valiant_comics_logo, "valiant");
-//                break;
 
         }
 
