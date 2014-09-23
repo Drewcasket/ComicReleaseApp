@@ -9,6 +9,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.webkit.WebView;
+import android.webkit.WebViewClient;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -36,30 +37,24 @@ public class MenuActivity extends BaseActivity implements View.OnClickListener {
         String companyTitle = getIntent().getStringExtra(COMPANY_TITLE);
         Button nextWeek = (Button) findViewById(R.id.next_week_button);
         Button lastWeek = (Button) findViewById(R.id.last_week_button);
+        Button currentWeek = (Button) findViewById(R.id.current_week_button);
         comicLogo = (ImageView) findViewById(R.id.comic_logo);
         webviewArea = (WebView) findViewById(R.id.webview_area);
         dateFormatter = new ComixologyDateFormatter(companyTitle);
 
-
-
-
-
-
+        webviewArea.setWebViewClient(new WebViewClient() {
+                                         @Override
+                                         public boolean shouldOverrideUrlLoading(WebView view, String url) {
+                                             view.loadUrl(url);
+                                             return true;
+                                         }
+                                     });
 
         nextWeek.setOnClickListener(this);
         lastWeek.setOnClickListener(this);
+        currentWeek.setOnClickListener(this);
         comicLogo.setImageResource(companyLogo);
-        webviewArea.loadUrl (dateFormatter.currentWeek());
-
-
-
-
-
-
-
-
-
-
+        webviewArea.loadUrl(dateFormatter.currentWeek());
     }
 
 
@@ -85,7 +80,6 @@ public class MenuActivity extends BaseActivity implements View.OnClickListener {
     @Override
     public void onClick(View v) {
 
-
         switch (v.getId()) {
             case R.id.last_week_button:
                 webviewArea.loadUrl(dateFormatter.lastWeek());
@@ -96,9 +90,8 @@ public class MenuActivity extends BaseActivity implements View.OnClickListener {
                 break;
 
             case R.id.current_week_button:
-                webviewArea.loadUrl(dateFormatter.nextWeek());
+                webviewArea.loadUrl(dateFormatter.currentWeek());
                 break;
-
         }
 
     }

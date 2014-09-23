@@ -35,32 +35,32 @@
         android:layout_marginTop="10dp"
         android:layout_below="@+id/new_releases_button"/>
 
-    <Button
-        android:layout_centerHorizontal="true"
-        android:id="@+id/sign_in_button"
-        android:layout_width="150dp"
-        android:layout_height="50dp"
-        android:text="@string/sign_in"
-        android:layout_marginTop="10dp"
-        android:layout_below="@+id/my_comics_button"/>
+    <!--<Button-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:id="@+id/sign_in_button"-->
+        <!--android:layout_width="150dp"-->
+        <!--android:layout_height="50dp"-->
+        <!--android:text="@string/sign_in"-->
+        <!--android:layout_marginTop="10dp"-->
+        <!--android:layout_below="@+id/my_comics_button"/>-->
 
-    <Button
-        android:layout_centerHorizontal="true"
-        android:id="@+id/sign_out_button"
-        android:layout_width="150dp"
-        android:layout_height="50dp"
-        android:text="@string/sign_out"
-        android:layout_marginTop="10dp"
-        android:layout_below="@+id/my_comics_button"/>
+    <!--<Button-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:id="@+id/sign_out_button"-->
+        <!--android:layout_width="150dp"-->
+        <!--android:layout_height="50dp"-->
+        <!--android:text="@string/sign_out"-->
+        <!--android:layout_marginTop="10dp"-->
+        <!--android:layout_below="@+id/my_comics_button"/>-->
 
-    <Button
-        android:layout_centerHorizontal="true"
-        android:id="@+id/register_button"
-        android:layout_width="150dp"
-        android:layout_height="50dp"
-        android:text="@string/register"
-        android:layout_marginTop="10dp"
-        android:layout_below="@+id/sign_in_button"/>
+    <!--<Button-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:id="@+id/register_button"-->
+        <!--android:layout_width="150dp"-->
+        <!--android:layout_height="50dp"-->
+        <!--android:text="@string/register"-->
+        <!--android:layout_marginTop="10dp"-->
+        <!--android:layout_below="@+id/sign_in_button"/>-->
 
 
 </RelativeLayout>
