@@ -6,6 +6,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 
 public class HomeActivity extends BaseActivity implements View.OnClickListener {
 
@@ -17,16 +18,20 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_home);
 
-        Button newReleases = (Button) findViewById(R.id.new_releases_button);
-        Button myComics = (Button) findViewById(R.id.my_comics_button);
+
+        this.setContentView(R.layout.activity_home);
+
+        Button pageTurn = (Button)findViewById(R.id.pageTurn_btn);
+        pageTurn.setOnClickListener(this);
+//        Button newReleases = (Button) findViewById(R.id.new_releases_button);
+//        Button myComics = (Button) findViewById(R.id.my_comics_button);
 //        signIn = (Button) findViewById(R.id.sign_in_button);
 //        signOut = (Button) findViewById(R.id.sign_out_button);
 //        register = (Button) findViewById(R.id.register_button);
 
-        newReleases.setOnClickListener(this);
-        myComics.setOnClickListener(this);
+//        newReleases.setOnClickListener(this);
+//        myComics.setOnClickListener(this);
 //        signIn.setOnClickListener(this);
 //        signOut.setOnClickListener(this);
 //        register.setOnClickListener(this);
@@ -40,10 +45,8 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener {
 //            signIn.setOnClickListener(this);
 //            register.setVisibility(View.VISIBLE);
 //            signOut.setVisibility(View.GONE);
-//        }
+        }
 
-
-    }
 
 
     @Override
@@ -65,19 +68,19 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener {
         return super.onOptionsItemSelected(item);
     }
 
-    @Override
-    public void onClick(View v) {
-
-
-        switch (v.getId()) {
-            case R.id.new_releases_button:
-                Intent iNewReleases = new Intent(this, CompanyListActivity.class);
-                startActivity(iNewReleases);
-                break;
-            case R.id.my_comics_button:
-                Intent iMyComics = new Intent(this, MyComicsActivity.class);
-                startActivity(iMyComics);
-                break;
+//    @Override
+//    public void onClick(View v) {
+//
+//
+//        switch (v.getId()) {
+//            case R.id.new_releases_button:
+//                Intent iNewReleases = new Intent(this, CompanyListActivity.class);
+//                startActivity(iNewReleases);
+//                break;
+//            case R.id.my_comics_button:
+//                Intent iMyComics = new Intent(this, MyComicsActivity.class);
+//                startActivity(iMyComics);
+//                break;
 //            case R.id.sign_in_button:
 //                Intent iSignIn = new Intent(this, SignInActivity.class);
 //                startActivity(iSignIn);
@@ -96,7 +99,7 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener {
 //                //set user pref as signed out
 //                break;
 
-        }
-
-    }
+//        }
+//
+//    }
 }
