@@ -2,6 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+
     tools:context="com.example.drew.hackdayproject.MenuActivity">
 
     <ImageView
@@ -22,10 +23,17 @@
         android:id="@+id/last_week_button"
         android:layout_width="100dp"
         android:layout_height="60dp"
-        android:text="@string/last_week"
+        android:background="@drawable/last_week_button_default"
         android:layout_marginTop="100dp"
         />
-
+    <Button
+        android:layout_alignParentLeft="true"
+        android:id="@+id/last_week_button_pressed"
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        android:background="@drawable/last_week_button_pressed"
+        android:layout_marginTop="100dp"
+        />
     <Button
         android:layout_alignParentRight="true"
         android:id="@+id/next_week_button"
@@ -47,7 +55,7 @@
         android:id="@+id/webview_area"
         android:layout_width="match_parent"
         android:layout_height="fill_parent"
-        android:layout_below="@+id/last_week_button" >
+        android:layout_below="@+id/current_week_button" >
         </WebView>
 
 </RelativeLayout>

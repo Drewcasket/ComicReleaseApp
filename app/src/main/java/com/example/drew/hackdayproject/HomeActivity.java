@@ -22,8 +22,8 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener {
 
         this.setContentView(R.layout.activity_home);
 
-        Button pageTurn = (Button)findViewById(R.id.pageTurn_btn);
-        pageTurn.setOnClickListener(this);
+        ImageView homePage = (ImageView)findViewById(R.id.home_page);
+        homePage.setOnClickListener(this);
 //        Button newReleases = (Button) findViewById(R.id.new_releases_button);
 //        Button myComics = (Button) findViewById(R.id.my_comics_button);
 //        signIn = (Button) findViewById(R.id.sign_in_button);
@@ -68,9 +68,11 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener {
         return super.onOptionsItemSelected(item);
     }
 
-//    @Override
-//    public void onClick(View v) {
+    @Override
+    public void onClick(View v) {
 //
+        Intent iChoose = new Intent(this, CompanyListActivity.class);
+        startActivity(iChoose);
 //
 //        switch (v.getId()) {
 //            case R.id.new_releases_button:
@@ -101,5 +103,5 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener {
 
 //        }
 //
-//    }
+   }
 }

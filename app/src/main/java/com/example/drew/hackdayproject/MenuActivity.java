@@ -22,6 +22,8 @@ public class MenuActivity extends BaseActivity implements View.OnClickListener {
 
     public static final String COMPANY_LOGO = "compLogo";
     public static final String COMPANY_TITLE = "compTitle";
+    Button lastWeekPressed;
+    Button lastWeekDefault;
     ImageView comicLogo;
     WebView webviewArea;
     DateFormatter dateFormatter;
@@ -36,7 +38,9 @@ public class MenuActivity extends BaseActivity implements View.OnClickListener {
         int companyLogo = getIntent().getIntExtra(COMPANY_LOGO, 0);
         String companyTitle = getIntent().getStringExtra(COMPANY_TITLE);
         Button nextWeek = (Button) findViewById(R.id.next_week_button);
-        Button lastWeek = (Button) findViewById(R.id.last_week_button);
+        lastWeekDefault = (Button) findViewById(R.id.last_week_button);
+        lastWeekPressed = (Button) findViewById(R.id.last_week_button_pressed);
+
         Button currentWeek = (Button) findViewById(R.id.current_week_button);
         comicLogo = (ImageView) findViewById(R.id.comic_logo);
         webviewArea = (WebView) findViewById(R.id.webview_area);
@@ -51,7 +55,9 @@ public class MenuActivity extends BaseActivity implements View.OnClickListener {
                                      });
 
         nextWeek.setOnClickListener(this);
-        lastWeek.setOnClickListener(this);
+        lastWeekPressed.setOnClickListener(this);
+        lastWeekDefault.setOnClickListener(this);
+        lastWeekPressed.setVisibility(View.GONE);
         currentWeek.setOnClickListener(this);
         comicLogo.setImageResource(companyLogo);
         webviewArea.loadUrl(dateFormatter.currentWeek());
@@ -83,14 +89,22 @@ public class MenuActivity extends BaseActivity implements View.OnClickListener {
         switch (v.getId()) {
             case R.id.last_week_button:
                 webviewArea.loadUrl(dateFormatter.lastWeek());
+                lastWeekPressed.setVisibility(View.VISIBLE);
+                lastWeekDefault.setVisibility(View.GONE);
+
+
                 break;
 
             case R.id.next_week_button:
                 webviewArea.loadUrl(dateFormatter.nextWeek());
+                lastWeekPressed.setVisibility(View.GONE);
+                lastWeekDefault.setVisibility(View.VISIBLE);
                 break;
 
             case R.id.current_week_button:
                 webviewArea.loadUrl(dateFormatter.currentWeek());
+                lastWeekPressed.setVisibility(View.GONE);
+                lastWeekDefault.setVisibility(View.VISIBLE);
                 break;
         }
 
